@@ -57,7 +57,6 @@ export default function Home() {
         type="button"
         onClick={() => { setUrl((prev) => "")}}
         variant="contained"
-        loading={loading}
         sx={{ bgcolor: "red "}}
       >
         reset
