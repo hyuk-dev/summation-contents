@@ -43,6 +43,7 @@ export default function Home() {
         className="w-full p-2 border rounded mb-4"
       />
 
+      <div className="flex gap-5">
       <Button
         type="button"
         onClick={handleSummarize}
@@ -51,6 +52,17 @@ export default function Home() {
       >
         summarize
       </Button>
+
+      <Button
+        type="button"
+        onClick={() => { setUrl((prev) => "")}}
+        variant="contained"
+        loading={loading}
+        sx={{ bgcolor: "red "}}
+      >
+        reset
+      </Button>
+      </div>
 
       {summary && (
         <Paper elevation={3} sx={{ p: 3, mt: 10 }}>
